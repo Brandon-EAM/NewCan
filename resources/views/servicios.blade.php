@@ -6,8 +6,12 @@
 <script src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 <div x-data="{ atTop: true }" @scroll.window="atTop = (window.pageYOffset > 50 ? false : true)" class="relative">
     <!-- Hero Section -->
-    <div x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="bg-gradient-to-b from-blue-900 to-blue-800 py-12 transform transition-all duration-1000 opacity-0 translate-y-4">
-        <div class="container mx-auto px-4">
+    <div x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="relative py-12 transform transition-all duration-1000 opacity-0 translate-y-4">
+        <div class="absolute inset-0 z-0">
+            <img src="{{ asset('images/headers/servicios.jpg') }}" alt="Services Header" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-900 to-blue-800 opacity-80"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
             <h1 class="text-4xl md:text-5xl font-bold text-white text-center mb-6">Nuestros Servicios</h1>
             <p class="text-xl text-gray-200 text-justify max-w-3xl mx-auto">
                 En CANACINTRA Monclova ofrecemos soluciones integrales para impulsar la competitividad, innovación y crecimiento sostenible de tu empresa, con servicios diseñados para apoyar al sector industrial en cada etapa de su desarrollo.
@@ -104,7 +108,7 @@
                             alt="Bolsa de Trabajo" 
                             class="w-full h-48 object-cover transform group-hover:scale-110 group-hover:blur-sm transition-all duration-500">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <a href="/bolsa-trabajo" class="inline-block bg-blue-100 text-blue-900 font-semibold px-6 py-4 rounded-lg hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                            <a href="/servicios/bolsa" class="inline-block bg-blue-100 text-blue-900 font-semibold px-6 py-4 rounded-lg hover:bg-blue-900 hover:text-white transition-colors duration-300">
                                 Más Información
                             </a>
                         </div>
@@ -121,7 +125,7 @@
                              alt="Renta de Salas" 
                              class="w-full h-48 object-cover object-top transform group-hover:scale-110 group-hover:blur-sm transition-all duration-500">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <a href="/renta-salas" class="inline-block bg-red-100 text-red-700 font-semibold px-6 py-4 rounded-lg hover:bg-red-700 hover:text-white transition-colors duration-300">
+                            <a href="/servicios/renta-salas" class="inline-block bg-red-100 text-red-700 font-semibold px-6 py-4 rounded-lg hover:bg-red-700 hover:text-white transition-colors duration-300">
                                 Más Información
                             </a>
                         </div>
@@ -196,11 +200,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mt-8 overflow-hidden rounded-xl">
-                <img src="/images/servicios/RegistroSIEM.jpg" 
-                    alt="Registro SIEM" 
-                    class="w-full h-48 object-cover object-top transform group-hover:scale-110 transition-transform duration-500">
-            </div>
+                    <div class="mt-8 overflow-hidden rounded-xl relative">
+                        <img src="/images/servicios/RegistroSIEM.jpg" 
+                            alt="Registro SIEM" 
+                            class="w-full h-48 object-cover object-top transform group-hover:scale-110 group-hover:blur-sm transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="/servicios/siem-registro" class="inline-block bg-blue-100 text-blue-900 font-semibold px-6 py-4 rounded-lg hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                                Más Información
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 

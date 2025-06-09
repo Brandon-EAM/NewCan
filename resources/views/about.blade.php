@@ -3,8 +3,12 @@
 @section('content')
 <script src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 <div x-data="{ atTop: true }" @scroll.window="atTop = (window.pageYOffset > 50 ? false : true)" class="relative">
-<div x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="bg-gradient-to-b from-blue-900 to-blue-800 py-12 transform transition-all duration-1000 opacity-0 translate-y-4">
-    <div class="container mx-auto px-4">
+<div x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="relative py-12 transform transition-all duration-1000 opacity-0 translate-y-4">
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('images/headers/about.jpg') }}" alt="About Header" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-900 to-blue-800 opacity-80"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
         <h1 class="text-4xl md:text-5xl font-bold text-white text-center mb-6">Nosotros</h1>
         <p class="text-xl text-gray-200 text-justify max-w-3xl mx-auto">
             Somos el organismo que representa al sector industrial de México, fomentando la competitividad y productividad de las empresas, apoyándolas para que se mantengan en constante actualización y se conviertan en agentes innovadores socialmente responsables.

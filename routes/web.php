@@ -23,18 +23,13 @@ Route::get('/nosotros', function () {
 Route::get('/cursos', function () {
     return view('courses');
 });
+Route::view('/curso/gestion-calidad', 'curso_detalle');
 
-Route::view('/servicios', 'servicios')->name('servicios');
-Route::view('/bolsa', 'bolsa')->name('bolsa');
+Route::view('/servicios', 'servicios');
+Route::view('/servicios/bolsa', 'bolsa');
+Route::view('/servicios/siem-registro', 'siem_registro');
+Route::view('/servicios/renta-salas', 'renta');
 
 Route::get('/contacto', function () {
     return view('contact');
-});
-
-Route::get('/bolsa-trabajo', function () {
-    return view('bolsa');
-});
-
-Route::get('/renta-salas', function () {
-    return view('renta');
 });

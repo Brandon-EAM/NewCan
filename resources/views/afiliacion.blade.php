@@ -4,8 +4,12 @@
 <script src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 <div x-data="{ atTop: true }" @scroll.window="atTop = (window.pageYOffset > 50 ? false : true)" class="relative bg-gray-50 min-h-screen">
     <!-- Hero Section -->
-    <section x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16 transform transition-all duration-1000 opacity-0 translate-y-4">
-        <div class="container mx-auto px-4 text-center">
+    <section x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="relative py-16 transform transition-all duration-1000 opacity-0 translate-y-4">
+        <div class="absolute inset-0 z-0">
+            <img src="{{ asset('images/headers/afiliacion.jpg') }}" alt="Header Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-900 to-blue-800 opacity-80"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10 text-white">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Únete a CANACINTRA Monclova</h1>
             <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">Impulsa el crecimiento de tu empresa con los beneficios exclusivos de nuestra cámara industrial.</p>
             <a href="/contacto" class="inline-block bg-red-700 text-white font-semibold py-3 px-6 rounded-xl hover:bg-red-800 transition duration-300 transform hover:scale-105">Contáctanos</a>

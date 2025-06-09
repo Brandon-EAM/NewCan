@@ -10,17 +10,57 @@
     </div>
     <div class="container mx-auto px-4 py-12 md:py-24 relative z-10">
         <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            <div class="w-full md:w-1/4">
+            <div class="w-full md:w-1/4 animate-scale-fade-in">
                 <img src="{{ asset('images/Logo.png') }}" alt="CANACINTRA Logo" class="w-full h-auto max-w-[200px] mx-auto md:max-w-none">
             </div>
             <div class="w-full md:w-2/3 text-center md:text-left">
-                <h1 class="text-4xl md:text-6xl font-semibold mb-4 md:mb-6 animate-fade-in">LA FUERZA DE LA INDUSTRIA</h1>
-                <p class="text-lg md:text-xl mb-6 md:mb-8 text-gray-200">CANACINTRA Monclova ofrece una amplia gama de servicios y apoyo para que nuestros socios puedan alcanzar sus objetivos empresariales.</p>
-                <a href="/contacto" class="inline-block bg-canacintra-red hover:bg-red-800 text-white font-semibold px-6 md:px-8 py-3 rounded-lg transition-colors duration-300">Únete a Nosotros</a>
+                <h1 class="text-4xl md:text-6xl font-semibold mb-4 md:mb-6 animate-slide-fade-in animation-delay-500">LA FUERZA DE LA INDUSTRIA</h1>
+                <p class="text-lg md:text-xl mb-6 md:mb-8 text-gray-200 animate-slide-fade-in animation-delay-700">CANACINTRA Monclova ofrece una amplia gama de servicios y apoyo para que nuestros socios puedan alcanzar sus objetivos empresariales.</p>
+                <a href="/contacto" class="inline-block bg-canacintra-red hover:bg-red-800 text-white font-semibold px-6 md:px-8 py-3 rounded-lg transition-colors duration-300 animate-slide-fade-in animation-delay-900">Únete a Nosotros</a>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-slide-fade-in {
+    animation: slideFadeIn 0.8s ease-out forwards;
+}
+
+.animate-scale-fade-in {
+    animation: scaleFadeIn 0.8s ease-out forwards;
+}
+
+.animation-delay-200 {
+    animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+    animation-delay: 400ms;
+}
+</style>
 
 <!-- Job Board Banner Section -->
 <section class="pt-16 pb-16 bg-canacintra-red">
