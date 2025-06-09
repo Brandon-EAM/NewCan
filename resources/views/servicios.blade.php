@@ -22,45 +22,49 @@
     <!-- Servicios Grid -->
     <div class="container mx-auto px-4 py-16">
         <div x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 transform transition-all duration-1000 opacity-0 translate-y-4">
-            <!-- Servicio 1: Modelo Mexicano de Formación Dual (Image Above) -->
+            <!-- Servicio 1: Registro SIEM (Image Above) -->
             <div class="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
                 <div class="absolute inset-0 bg-gradient-to-br from-red-700/10 to-transparent pointer-events-none"></div>
                 <div class="relative p-8">
-                    <div class="mt-8 overflow-hidden rounded-xl">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                             alt="Modelo Mexicano de Formación Dual" 
-                             class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="mt-8 overflow-hidden rounded-xl relative">
+                        <img src="\images\servicios\RegistroSIEM.jpg" 
+                             alt="Renta de Salas" 
+                             class="w-full h-48 object-cover object-top transform group-hover:scale-110 group-hover:blur-sm transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="/servicios/siem-registro" class="inline-block bg-red-100 text-red-700 font-semibold px-6 py-4 rounded-lg hover:bg-red-700 hover:text-white transition-colors duration-300">
+                                Más Información
+                            </a>
+                        </div>
                     </div>
                     <div class="flex items-center mt-6 mb-4">
                         <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-red-700 transition-colors duration-300">
                             <svg class="w-8 h-8 p-0.5 text-red-700 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
-                                <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
-                                <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                                <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375Zm9.586 4.594a.75.75 0 0 0-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.116-.062l3-3.75Z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800">Formación dual</h3>
+                        <h3 class="text-2xl font-bold text-gray-800">Registro SIEM</h3>
                     </div>
                     <div class="space-y-6">
-                        <p class="text-gray-600 leading-relaxed text-lg">Formación dual que combina aprendizaje teórico y práctico para jóvenes.</p>
+                        <p class="text-gray-600 leading-relaxed text-lg">Registro en el Sistema de Información Empresarial Mexicano para visibilidad.</p>
                         <ul class="space-y-2 text-gray-600">
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-red-700 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Capacitación en empresas
+                                Inscripción al SIEM
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-red-700 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Programas educativos
+                                Actualización de datos
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-red-700 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Vinculación con instituciones
+                                Asesoría para cumplimiento
                             </li>
                         </ul>
                     </div>
@@ -164,51 +168,47 @@
                 </div>
             </div>
 
-            <!-- Servicio 4: Registro SIEM (Text Above) -->
+            <!-- Servicio 4: Formacion Dual (Text Above) -->
             <div class="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
                 <div class="absolute inset-0 bg-gradient-to-bl from-blue-900/10 to-transparent pointer-events-none"></div>
                 <div class="relative p-8">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-900 transition-colors duration-300">
-                            <svg class="w-6 h-6 text-blue-900 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
-                                <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375Zm9.586 4.594a.75.75 0 0 0-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.116-.062l3-3.75Z" clip-rule="evenodd" />
+                            <svg class="w-8 h-8 p-0.5 text-blue-900 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                                <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                                <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800">Registro SIEM</h3>
+                        <h3 class="text-2xl font-bold text-gray-800">Formación dual</h3>
                     </div>
                     <div class="space-y-6">
-                        <p class="text-gray-600 leading-relaxed text-lg">Registro en el Sistema de Información Empresarial Mexicano para visibilidad.</p>
+                        <p class="text-gray-600 leading-relaxed text-lg">Formación dual que combina aprendizaje teórico y práctico para jóvenes.</p>
                         <ul class="space-y-2 text-gray-600">
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-blue-900 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Inscripción al SIEM
+                                Capacitación en empresas
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-blue-900 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Actualización de datos
+                                Programas educativos
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-blue-900 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Asesoría para cumplimiento
+                                Vinculación con instituciones
                             </li>
                         </ul>
                     </div>
-                    <div class="mt-8 overflow-hidden rounded-xl relative">
-                        <img src="/images/servicios/RegistroSIEM.jpg" 
-                            alt="Registro SIEM" 
-                            class="w-full h-48 object-cover object-top transform group-hover:scale-110 group-hover:blur-sm transition-all duration-500">
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <a href="/servicios/siem-registro" class="inline-block bg-blue-100 text-blue-900 font-semibold px-6 py-4 rounded-lg hover:bg-blue-900 hover:text-white transition-colors duration-300">
-                                Más Información
-                            </a>
-                        </div>
+                    <div class="mt-8 overflow-hidden rounded-xl">
+                        <img src="/images/servicios/dual.jpg" 
+                            alt="Pruebas Psicométricas" 
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
             </div>

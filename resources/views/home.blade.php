@@ -74,7 +74,7 @@
                 <p class="text-gray-700 mb-6">
                     ¿Estás buscando una nueva oportunidad laboral? Regístrate en nuestra Bolsa de Trabajo y guarda tu información para que las empresas afiliadas a CANACINTRA Monclova puedan encontrarte fácilmente. Conéctate con el sector industrial de la región y da el siguiente paso en tu desarrollo profesional.
                 </p>
-                <a href="/bolsa" class="mt-2 inline-block bg-canacintra-red hover:bg-red-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300">Registrarse</a>
+                <a href="/servicios/bolsa" class="mt-2 inline-block bg-canacintra-red hover:bg-red-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300">Registrarse</a>
             </div>
         </div>
     </div>

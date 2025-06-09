@@ -54,9 +54,11 @@
                         <div class="ml-4">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Teléfonos</h3>
                             <p class="text-gray-600">
-                                Tel: (866) 633-5511<br>
-                                Tel: (866) 633-5600<br>
-                                Fax: (866) 633-5577
+                                Tel:  (866) 633-6633<br>
+                                      (866) 631-0099<br>
+                                      (866) 636-0886<br>
+                                      (866) 177-1061
+                                
                             </p>
                         </div>
                     </div>
@@ -71,7 +73,7 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Correo electrónico</h3>
-                            <p class="text-gray-600">contacto@canacintramonclova.org</p>
+                            <p class="text-gray-600">recepcion@canacintramonclova.org</p>
                         </div>
                     </div>
 
@@ -86,7 +88,7 @@
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Horario de atención</h3>
                             <p class="text-gray-600">
                                 Lunes a Viernes<br>
-                                9:00 AM - 6:00 PM
+                                8:00 AM - 6:00 PM
                             </p>
                         </div>
                     </div>

@@ -91,7 +91,7 @@
                         <p>Buenos Aires 102, Guadalupe</p>
                         <p>25750 Monclova, Coah.</p>
                         <p class="mt-2">Tel: 866 633 66 33</p>
-                        <p>Email: contacto@canacintramonclova.org</p>
+                        <p>Email: recepcion@canacintramonclova.org</p>
                     </address>
                 </div>
                 <div>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-300">
-                <p>&copy; 2024 CANACINTRA Monclova. Todos los derechos reservados.</p>
+                <p>&copy; 2025 CANACINTRA Monclova. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
