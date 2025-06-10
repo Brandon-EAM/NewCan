@@ -78,7 +78,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-canacintra-blue text-white mt-12">
+    <footer class="bg-canacintra-blue text-white">
         <div class="container mx-auto px-4 py-8">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>

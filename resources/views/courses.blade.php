@@ -78,71 +78,28 @@
     <div x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="mb-16 transform transition-all duration-1000 opacity-0 translate-y-4">
         <h2 class="text-3xl font-bold text-gray-800 mb-8">Cursos Destacados</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Curso 1 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-red-700 to-blue-900 relative">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-25" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                        </svg>
+            @foreach ($courses as $course)
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-r from-red-700 to-blue-900 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white opacity-25" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-{{ $course['mode'] == 'Online' ? 'blue-100 text-blue-900' : ($course['mode'] == 'Presencial' ? 'red-100 text-red-700' : 'purple-100 text-purple-900') }} px-3 py-1 rounded-full text-sm font-medium">{{ $course['mode'] }}</span>
+                            <span class="text-gray-500">{{ $course['hours'] ?? 'No especificado' }}</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ $course['title'] }}</h3>
+                        <p class="text-gray-600 mb-4">{{ $course['subtitle'] }}</p>
+                        <div class="flex justify-between items-center">
+                            <a href="{{ route('course.show', $course['id']) }}" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors duration-300">Más Información</a>
+                        </div>
                     </div>
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Presencial</span>
-                        <span class="text-gray-500">40 horas</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Gestión de Calidad ISO 9001</h3>
-                    <p class="text-gray-600 mb-4">Aprende a implementar y mantener un sistema de gestión de calidad efectivo en tu empresa.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="/curso/gestion-calidad" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors duration-300">Inscribirse</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Curso 2 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-blue-900 to-red-700 relative">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-25" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm font-medium">Online</span>
-                        <span class="text-gray-500">30 horas</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Seguridad Industrial Avanzada</h3>
-                    <p class="text-gray-600 mb-4">Desarrolla estrategias efectivas para garantizar la seguridad en entornos industriales.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="/curso/gestion-calidad" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors duration-300">Inscribirse</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Curso 3 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-red-700 to-blue-900 relative">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-25" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Híbrido</span>
-                        <span class="text-gray-500">50 horas</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Liderazgo Industrial</h3>
-                    <p class="text-gray-600 mb-4">Desarrolla habilidades de liderazgo efectivo para el entorno industrial moderno.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="/curso/gestion-calidad" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors duration-300">Inscribirse</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 

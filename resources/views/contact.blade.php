@@ -40,7 +40,7 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Dirección</h3>
-                            <p class="text-gray-600">Blvd Harold R. Pape 102<br>Colonia Guadalupe<br>25750 Monclova, Coahuila</p>
+                            <p class="text-gray-600">Buenos Aires 102<br>Colonia Guadalupe<br>25750 Monclova, Coahuila</p>
                         </div>
                     </div>
 
