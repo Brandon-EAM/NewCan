@@ -35,28 +35,12 @@ Route::get('/contacto', function () {
 
 use Illuminate\Support\Facades\File;
 
-Route::get('/cursos/{id}', function ($id) {
-    // Leer el archivo JSON
-    $jsonPath = storage_path('\app\public\courses.json');
-    $courses = json_decode(File::get($jsonPath), true)['courses'];
-    
-    // Buscar el curso por ID
-    $course = collect($courses)->firstWhere('id', $id);
-    // Verificar si el curso existe
-    if (!$course) {
-        abort(404, 'Curso no encontrado');
-    }
-    
-    // Pasar los datos del curso a la vista
-    return view('course', compact('course'));
-})->name('course.show');
-
 use App\Http\Controllers\CursosController;
 
 Route::get('/cursos', [CursosController::class, 'index'])->name('courses.index');
 
 Route::get('/cursos/{id}', function ($id) {
-    $jsonPath = storage_path('\app\public\courses.json');
+    $jsonPath = storage_path('app/public/courses.json');
     $courses = json_decode(File::get($jsonPath), true)['courses'];
     $course = collect($courses)->firstWhere('id', $id);
     if (!$course) {
