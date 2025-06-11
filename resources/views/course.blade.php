@@ -29,8 +29,10 @@
             <div x-intersect="$el.classList.add('opacity-100', 'translate-y-0')" class="bg-white rounded-2xl shadow-xl p-8 md:p-12 transform transition-all duration-1000 opacity-0 translate-y-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <!-- Course Image -->
-                    <div class="relative">
-                        <img src="{{ asset($course['image']) }}" alt="Imagen del Curso" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-md transform hover:scale-105 transition duration-500">
+                    <div class="relative w-full">
+                        <div class="relative overflow-hidden rounded-xl shadow-md">
+                            <img src="{{ asset($course['image']) }}" alt="Imagen del Curso" class="w-full h-auto object-contain transform hover:scale-105 transition duration-500">
+                        </div>
                         @if ($course['limited_spots'])
                         <div class="absolute -bottom-4 -right-4 bg-red-700 text-white px-4 py-2 rounded-lg shadow-md">
                             <span class="text-sm font-semibold">Cupo Limitado</span>
@@ -59,7 +61,7 @@
                         </ul>
                         <div class="mt-8">
                             <a href="{{ $course['redirect_url'] }}" 
-                               class="inline-block px-8 py-3 bg-blue-700 text-white font-semibold rounded-full hover:bg-blue-800 transition duration-300 transform hover:scale-105">
+                            class="inline-block px-8 py-3 bg-blue-700 text-white font-semibold rounded-full hover:bg-blue-800 transition duration-300 transform hover:scale-105">
                                 Reserva tu Lugar
                             </a>
                         </div>
